@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="son3.AddEditPage"
+    Title="Елемент ПЗ">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="8">
+
+            <Label Text="Назва:"/>
+            <Entry x:Name="NameEntry"/>
+
+            <Label Text="Тип:"/>
+            <Entry x:Name="TypeEntry"/>
+
+            <Label Text="Автор:"/>
+            <Entry x:Name="AuthorEntry"/>
+
+            <Label Text="Ліцензія:"/>
+            <Entry x:Name="LicenseEntry"/>
+
+            <Label Text="Версія:"/>
+            <Entry x:Name="VersionEntry"/>
+
+            <Label Text="Опис:"/>
+            <Editor x:Name="DescriptionEditor" HeightRequest="120"/>
+            <Label Text="Класифікація:"/>
+            <Entry x:Name="DistributionEntry"/>
+
+            <HorizontalStackLayout Spacing="8" Margin="0,16,0,0">
+                <Button Text="Зберегти"
+                        Clicked="Save_Clicked"
+                       />
+                <Button Text="Скасувати"
+                        Clicked="Cancel_Clicked"
+                        />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

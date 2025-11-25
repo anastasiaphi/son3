@@ -1,0 +1,48 @@
+
+    [
+        {
+            "Name": "Visual Studio",
+            "Type": "IDE",
+            "Author": "Microsoft",
+            "License": "Community",
+            "Version": "2024.1",
+            "Description": "Інтегроване середовище розробки для C#, C++ та інших мов.",
+            "Distribution": "\\\\server\\tools\\vs2024"
+        },
+        {
+            "Name": "SQL Server",
+            "Type": "IDE",
+            "Author": "Microsoft",
+            "License": "Developer",
+            "Version": "15.0",
+            "Description": "Серверна система керування базами даних.",
+            "Distribution": "\\\\server\\db\\sql2022"
+        },
+        {
+            "Name": "LibreOffice",
+            "Type": "Office",
+            "Author": "The Document Foundation",
+            "License": "Open Source",
+            "Version": "2023",
+            "Description": "Пакет офісних застосунків з відкритим кодом.",
+            "Distribution": "\\\\server\\office\\libre"
+        },
+        {
+            "Name": "Mozilla Firefox",
+            "Type": "Browser",
+            "Author": "Mozilla Foundation",
+            "License": "Free",
+            "Version": "121.0",
+            "Description": "Веб-браузер із відкритим кодом.",
+            "Distribution": "\\\\server\\browsers\\firefox"
+        },
+        {
+            "Name": "Kaspersky Endpoint Security",
+            "Type": "Security",
+            "Author": "Kaspersky Lab",
+            "License": "Commercial",
+            "Version": "10.2",
+            "Description": "Антивірусний захист для корпоративних мереж.",
+            "Distribution": "\\\\server\\security\\kes"
+        }
+    ]

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="son3.MainPage"
+    Title="JSON диспетчер ПЗ">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+
+        <HorizontalStackLayout >
+            <Button Text="Відкрити JSON"
+                    Clicked="OpenJson_Clicked" />
+
+            <Button Text="Зберегти"
+                    Clicked="SaveJson_Clicked"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout >
+            <Picker x:Name="SearchFieldPicker"
+        Title="Поле"
+        SelectedIndexChanged="Search_Changed">
+                <Picker.Items>
+                    <x:String>Назва</x:String>
+                    <x:String>Тип</x:String>
+                    <x:String>Автор</x:String>
+                    <x:String>Ліцензія</x:String>
+                </Picker.Items>
+            </Picker>
+
+
+            <Entry x:Name="SearchEntry"
+                   Placeholder="Пошук..."
+                   TextChanged="Search_Changed"
+                  />
+
+            <Button Text="Скинути"
+                    Clicked="ResetSearch_Clicked"/>
+        </HorizontalStackLayout>
+
+   
+        <CollectionView x:Name="SoftwareCollection"
+                        SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto,Auto">
+                        <Label Grid.Row="0" Grid.Column="0"
+                               FontAttributes="Bold"
+                               Text="{Binding Name}" />
+                        <Label Grid.Row="1" Grid.Column="0"
+                               FontSize="12"
+                               Text="{Binding Type}" />
+                        <Label Grid.RowSpan="2" Grid.Column="1"
+                               FontSize="11"
+                               Text="{Binding Version}"
+                               VerticalOptions="Center"
+                               HorizontalTextAlignment="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+  
+        <HorizontalStackLayout Spacing="8">
+            <Button Text="Додати"
+                    Clicked="Add_Clicked"
+                   />
+            <Button Text="Редагувати"
+                    Clicked="Edit_Clicked"
+                    />
+            <Button Text="Видалити"
+                    Clicked="Delete_Clicked"
+                    />
+        </HorizontalStackLayout>
+   
+        <Button Text="Про програму"
+                Clicked="About_Clicked"
+                HorizontalOptions="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>
