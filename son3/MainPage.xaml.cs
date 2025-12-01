@@ -52,22 +52,22 @@ public partial class MainPage : ContentPage
    
     private async void SaveJson_Clicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(_currentFilePath))
-        {
-            await DisplayAlert("Увага", "Спочатку відкрийте JSON-файл.", "OK");
-            return;
-        }
+         if (string.IsNullOrWhiteSpace(_currentFilePath))
+ {
+     await DisplayAlert("Увага", "Спочатку відкрийте JSON-файл.", "OK");
+     return;
+ }
 
-        try
-        {
-            _allItems = _items.ToList();
-            await _jsonService.SaveAsync(_currentFilePath, _allItems);
-            await DisplayAlert("OK", "Файл успішно збережено.", "Далі");
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Помилка", ex.Message, "OK");
-        }
+ try
+ {
+     _allItems = _items.ToList();
+     await _jsonService.SaveAsync(_currentFilePath, _allItems);
+     await DisplayAlert("OK", "Файл успішно збережено.", "Далі");
+ }
+ catch (Exception ex)
+ {
+     await DisplayAlert("Помилка", ex.Message, "OK");
+ }
     }
 
 
